@@ -61,15 +61,24 @@ dental.forEach(function(x){
     document.write(`<ul><li>${x.paciente}</li></ul>`)
 })
 document.write(`<hr>`)
-//Agregar código para el desafio 2 aquí
+
+//Requerimiento 5//
 document.write(`<h3>Previsión ISAPRE - Área Dental</h3>`)
 dental.forEach(function(x){
-    document.write(`<ul><li>${x.paciente} - ${x.prevision}</li></ul>`)
-})
+    if(x.prevision == 'ISAPRE')
+    document.write(`<ul><li>${x.paciente} - ${x.prevision}</li></ul>`);
+    })
+
+document.write(`<hr>`)
+//Requerimiento 6//
+document.write(`<h3>Previsión ISAPRE - Área Dental</h3>`)
+traumatologia.forEach(function(x){
+    if(x.prevision == 'FONASA')
+    document.write(`<ul><li>${x.paciente} - ${x.prevision}</li></ul>`);
+    })
+
 document.write(`<hr>`)
 
-
-//Agregar código para el desafio 2 aquí
 
 document.write(`<p>Cantidad de atenciones para Radiología: ${radiologia.length}</p>`);
 document.write(`<p>Cantidad de atenciones para Traumatología: ${traumatologia.length}</p>`);
