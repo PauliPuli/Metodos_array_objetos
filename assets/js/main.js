@@ -1,4 +1,4 @@
-document.write('<p>Estadisticas centro medico ñuñoa</p>');
+document.write('<h1>Estadisticas centro médico Ñuñoa</h1>');
 //Requerimiento 2//
 var radiologia = [
     {hora: '11:00', especialista: 'IGNACIO SCHULZ', paciente: 'FRANCISCA ROJAS', rut: '9878782-1', prevision: 'FONASA'},
@@ -30,7 +30,7 @@ traumatologia.push(
 );
 document.write(`<h2>Traumatología</h2>`)
 let consultatraumatologia = traumatologia.map(function(consulta){
-    document.write(`<p>${consulta.hora} - ${consulta.paciente} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision} </p>`)
+    document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision} </p>`)
 });
 document.write(`<hr>`)
 
@@ -45,7 +45,7 @@ var dental = [
 ];
 document.write(`<h2>Dental</h2>`)
 let consultadental = dental.map(function(consulta){
-    document.write(`<p>${consulta.hora} - ${consulta.paciente} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision} </p>`)
+    document.write(`<p>${consulta.hora} - ${consulta.especialista} - ${consulta.paciente} - ${consulta.rut} - ${consulta.prevision} </p>`)
 });
 document.write(`<hr>`)
 //Requerimiento 4//
@@ -71,7 +71,7 @@ dental.forEach(function(x){
 
 document.write(`<hr>`)
 //Requerimiento 6//
-document.write(`<h3>Previsión ISAPRE - Área Dental</h3>`)
+document.write(`<h3>Previsión FONASA - Área Traumatología</h3>`)
 traumatologia.forEach(function(x){
     if(x.prevision == 'FONASA')
     document.write(`<ul><li>${x.paciente} - ${x.prevision}</li></ul>`);
